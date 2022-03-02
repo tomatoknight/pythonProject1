@@ -10,3 +10,8 @@ arr = np.array([20], dtype=np.uint8)
 print(arr)
 
 print(np.right_shift(40, 2))
+
+m = np.array([[30, 65, 70], [80, 95, 10], [50, 90, 60]])
+print(m)
+print(np.median(m))
+
