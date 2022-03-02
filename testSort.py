@@ -15,3 +15,4 @@ sort_id = np.argsort(c)
 print(sort_id)
 for a in sort_id:
     print(c[a], end=" ")
+
