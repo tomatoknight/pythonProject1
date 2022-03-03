@@ -38,12 +38,35 @@ import math
 # ax.set_ylabel('sales')
 # plt.show()
 
-plt.plot([1,2,3])
-#现在创建一个子图，它表示一个有2行1列的网格的顶部图。
-#因为这个子图将与第一个重叠，所以之前创建的图将被删除
-plt.subplot(211)
-plt.plot(range(12))
-#创建带有黄色背景的第二个子图
-plt.subplot(212, facecolor='y')
-plt.plot(range(12))
+#
+# x = np.arange(0, 3*np.pi, 0.05)
+# y = np.cos(x)
+# fig = plt.figure()
+#
+# axis1 = fig.add_axes([0.1, 0.1, 0.8, 0.8])
+# axis2 = fig.add_axes([0.55, 0.55, 0.3, 0.3])
+#
+# axis1.plot(x, y, 'b')
+# axis2.plot(x, np.sin(x), 'r')
+# axis2.set_title("sine")
+# axis1.set_title("cosine")
+# plt.show()
+
+#Demo of using function "subspolts()"
+
+x = np.arange(0, 5, 0.1)
+fig, ax = plt.subplots(2, 2)
+
+ax[0][0].plot(x, x**2)
+ax[0][0].set_title("square")
+
+ax[0][1].plot(x, np.sqrt(x))
+ax[0][1].set_title("square root")
+
+ax[1][0].plot(x, sin(x))
+ax[1][0].set_title("sine")
+
+ax[1][1].plot(x, cos(x))
+ax[1][1].set_title("consine")
+
 plt.show()
